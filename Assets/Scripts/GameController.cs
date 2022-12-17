@@ -1,4 +1,3 @@
-using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
@@ -7,65 +6,67 @@ namespace Game
 
 	public class GameController : MonoBehaviour
 	{
-        [SerializeField]
-        private UIScorePanel m_scorePanel;
+		[SerializeField]
+		private UIScorePanel m_scorePanel;
 
-        private int m_score = 0;
-        private int m_maxScore = 0;
+		private int m_score = 0;
+		private int m_maxScore = 0;
 
-        public int maxScore => m_maxScore;
-        public int score => m_score;
+		public int maxScore => m_maxScore;
+		public int score => m_score;
 
-        [SerializeField] private MainMenuState m_mainMenuState;
-        [SerializeField] private GameState m_gameState;
+		[SerializeField] private MainMenuState m_mainMenuState;
+		[SerializeField] private GameState m_gameState;
 
-        private void Start()
-        {
-            MainMenuState();
-        }
+		private void Start()
+		{
+			MainMenuState();
+		}
 
-        private void MainMenuState()
-        {
-            m_mainMenuState.enabled = true;
-            m_gameState.enabled = false;
+		private void MainMenuState()
+		{
+			m_mainMenuState.enabled = true;
+			m_gameState.enabled = false;
+		}
 
-            if (Player.animator == null)
-                return;
+		private void GameState()
+		{
+			m_mainMenuState.enabled = false;
+			m_gameState.enabled = true;
+		}
 
-            Player.animator.SetBool("Target", false);
-        }
+		public void StartGame()
+		{
+			GameState();
+		}
 
-        private void GameState()
-        {
-            m_mainMenuState.enabled = false;
-            m_gameState.enabled = true;
-        }
+		public void GameOver()
+		{
+			MainMenuState();
+		}
 
-        public void StartGame()
-        {
-            GameState();
-        }
+		public void IncScore()
+		{
+			m_score++;
+			m_maxScore = Mathf.Max(m_score, m_maxScore);
+		}
 
-        public void GameOver()
-        {
-            MainMenuState();
-        }
+		public void ResetScore()
+		{
+			m_score = 0;
+		}
 
-        public void IncScore()
-        {
-            m_score++;
-            m_maxScore = Mathf.Max(m_score, m_maxScore);
-        }
+		public void RefreshScore(int score)
+		{
+			m_scorePanel.SetScore(score);
+		}
 
-        public void ResetScore()
-        {
-            m_score = 0;
-        }
+		public void ResetAnimations()
+		{
+			if (Player.animator == null)
+				return;
 
-        public void RefreshScore(int score)
-        {
-            m_scorePanel.SetScore(score);
-        }
-
-    }
+			Player.animator.SetBool("Target", false);
+		}
+	}
 }

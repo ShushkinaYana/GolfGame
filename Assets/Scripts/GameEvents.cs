@@ -4,8 +4,8 @@ using UnityEngine;
 
 namespace Game
 {
-    public static class GameEvents
-    {
-        public static System.Action<Stone, Stone> onCollisionStones;
-    }
+	public static class GameEvents
+	{
+		public static System.Action<Stone, Stone> onCollisionStones;
+	}
 }
