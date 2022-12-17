@@ -1,18 +1,29 @@
-using System.Collections;
-using System.Collections.Generic;
 using UnityEngine;
 
-public class MainMenuState : MonoBehaviour
+namespace Game
 {
-    // Start is called before the first frame update
-    void Start()
+    public class MainMenuState : MonoBehaviour
     {
-        
-    }
 
-    // Update is called once per frame
-    void Update()
-    {
-        
+        [SerializeField]
+        private GameController m_gameController;
+        [SerializeField]
+        private GameObject m_mainMenuPanel;
+
+        private void OnEnable()
+        {
+            m_gameController.RefreshScore(m_gameController.maxScore);
+            m_mainMenuPanel.SetActive(true);
+        }
+
+        private void OnDisable()
+        {
+            m_mainMenuPanel.SetActive(false);
+        }
+
+        public void PlayGame()
+        {
+            m_gameController.StartGame();
+        }
     }
 }
