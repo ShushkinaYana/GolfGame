@@ -1,0 +1,61 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!687078895 &4343727234628468602
+SpriteAtlas:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_Name: AtlasMainMenu
+  m_EditorData:
+    serializedVersion: 2
+    textureSettings:
+      serializedVersion: 2
+      anisoLevel: 1
+      compressionQuality: 50
+      maxTextureSize: 2048
+      textureCompression: 0
+      filterMode: 1
+      generateMipMaps: 0
+      readable: 0
+      crunchedCompression: 0
+      sRGB: 1
+    platformSettings: []
+    packingSettings:
+      serializedVersion: 2
+      padding: 4
+      blockOffset: 1
+      allowAlphaSplitting: 0
+      enableRotation: 0
+      enableTightPacking: 0
+      enableAlphaDilation: 0
+    secondaryTextureSettings: {}
+    variantMultiplier: 1
+    packables:
+    - {fileID: -6000750511156525454, guid: f73e38a1a909bb74086ca5de5bf7bbf2, type: 3}
+    - {fileID: 6489066985878711624, guid: f73e38a1a909bb74086ca5de5bf7bbf2, type: 3}
+    - {fileID: 5771839457883388520, guid: f73e38a1a909bb74086ca5de5bf7bbf2, type: 3}
+    - {fileID: 4869713096458672283, guid: f73e38a1a909bb74086ca5de5bf7bbf2, type: 3}
+    - {fileID: 8372763198403946646, guid: f73e38a1a909bb74086ca5de5bf7bbf2, type: 3}
+    - {fileID: -2023294808008140659, guid: ba2f398c268d32d41825f366add3c494, type: 3}
+    bindAsDefault: 1
+    isAtlasV2: 0
+    cachedData: {fileID: 0}
+  m_MasterAtlas: {fileID: 0}
+  m_PackedSprites:
+  - {fileID: 5771839457883388520, guid: f73e38a1a909bb74086ca5de5bf7bbf2, type: 3}
+  - {fileID: -6000750511156525454, guid: f73e38a1a909bb74086ca5de5bf7bbf2, type: 3}
+  - {fileID: 6489066985878711624, guid: f73e38a1a909bb74086ca5de5bf7bbf2, type: 3}
+  - {fileID: 8372763198403946646, guid: f73e38a1a909bb74086ca5de5bf7bbf2, type: 3}
+  - {fileID: 4869713096458672283, guid: f73e38a1a909bb74086ca5de5bf7bbf2, type: 3}
+  - {fileID: -2023294808008140659, guid: ba2f398c268d32d41825f366add3c494, type: 3}
+  m_PackedSpriteNamesToIndex:
+  - "pixil-frame-0 (5) \u043A\u043E\u043F\u0438\u044F"
+  - "pixil-frame-0 (5) \u043A\u043E\u043F\u0438\u044F 3"
+  - "pixil-frame-0 (5) \u043A\u043E\u043F\u0438\u044F 2"
+  - pixil-frame-0 (2)
+  - pixil-frame-0 (5)
+  - hit hoe! hit!
+  m_RenderDataMap: {}
+  m_Tag: AtlasMainMenu
+  m_IsVariant: 0
