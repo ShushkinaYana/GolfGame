@@ -36,7 +36,11 @@ namespace Game
 
 		private void OnDisable()
 		{
-			m_gamePanel.SetActive(false);
+			if (m_gamePanel == null)
+				return;
+
+                m_gamePanel.SetActive(false);
+
 			ClearStones();
 			GameEvents.onCollisionStones -= CheckGameOver;
 		}

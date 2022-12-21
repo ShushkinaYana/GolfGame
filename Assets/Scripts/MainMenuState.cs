@@ -22,6 +22,9 @@ namespace Game
 
 		private void OnDisable()
 		{
+			if (m_mainMenuPanel == null)
+				return;
+
 			m_mainMenuPanel.SetActive(false);
 		}
 
